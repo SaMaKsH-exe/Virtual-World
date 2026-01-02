@@ -6,6 +6,19 @@ class Graph {
 		this.segments = segments;
 	}
 
+	static load(info) {
+		const points = info.points.map((i) => new Point(i.x, i.y));
+		const segments = info.segments.map(
+			(i) =>
+				new Segment(
+					points.find((p) => p.equals(i.p1)),
+					points.find((p) => p.equals(i.p2))
+				)
+		);
+
+		return new Graph(points, segments);
+	}
+
 	addPoint(point) {
 		this.points.push(point);
 	}
@@ -60,10 +73,10 @@ class Graph {
 		return segs;
 	}
 
-    dispose() {
-        this.points.length = 0;
-        this.segments.length = 0;
-    }
+	dispose() {
+		this.points.length = 0;
+		this.segments.length = 0;
+	}
 	draw(ctx) {
 		for (const seg of this.segments) {
 			seg.draw(ctx);
