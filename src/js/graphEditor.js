@@ -27,7 +27,7 @@ class GraphEditor {
 			this.graph.points,
 			15 * this.viewport.zoom
 		);
-		if (this.dragging == true) {
+		if (this.dragging == true && this.selected) {
 			this.selected.x = this.mouse.x;
 			this.selected.y = this.mouse.y;
 		}
