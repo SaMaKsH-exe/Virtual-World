@@ -43,7 +43,7 @@ function magnitude(p) {
 function translate(loc, angle, offset) {
 	return new Point(
 		loc.x + Math.cos(angle) * offset,
-		loc.y + Math.sin(angle) * offset
+		loc.y + Math.sin(angle) * offset,
 	);
 }
 
@@ -72,6 +72,9 @@ function getIntersection(A, B, C, D) {
 	return null;
 }
 
+function lerp2d(p1, p2, t) {
+	return new Point(lerp(p1.x, p2.x, t), lerp(p1.y, p2.y, t));
+}
 
 function dot(p1, p2) {
 	return p1.x * p2.x + p1.y * p2.y;
@@ -81,8 +84,14 @@ function lerp(a, b, t) {
 	return a + (b - a) * t;
 }
 
-// if you're following along, this comes in a few minutes ;-)
 function getRandomColor() {
 	const hue = 290 + Math.random() * 260;
 	return "hsl(" + hue + ", 100%, 60%)";
+}
+
+function getFake3D(point, viewPoint, height) {
+	const dir = normalize(subtract(point, viewPoint));
+	const dist = distance(point, viewPoint);
+	const scaler = Math.atan(dist / 300) / (Math.PI / 2);
+	return add(point, scale(dir, height * scaler));
 }
