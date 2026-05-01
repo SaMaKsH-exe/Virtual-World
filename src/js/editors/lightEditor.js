@@ -1,10 +1,12 @@
 /** @format */
-class StopEditor extends MarkingEditor {
+
+class LightEditor extends MarkingEditor {
 	constructor(viewport, world) {
 		super(viewport, world, world.laneGuides);
 	}
+
 	createMarking(center, directionVector) {
-		return new Stop(
+		return new Light(
 			center,
 			directionVector,
 			world.roadWidth / 2,
