@@ -12,16 +12,16 @@ class Graph {
 			(i) =>
 				new Segment(
 					points.find((p) => p.equals(i.p1)),
-					points.find((p) => p.equals(i.p2))
-				)
+					points.find((p) => p.equals(i.p2)),
+				),
 		);
-
 		return new Graph(points, segments);
 	}
 
 	hash() {
-		return JSON.stringify(this)
+		return JSON.stringify(this);
 	}
+
 	addPoint(point) {
 		this.points.push(point);
 	}
@@ -39,7 +39,7 @@ class Graph {
 	}
 
 	removePoint(point) {
-		const segs = this.getSegmentWithPoint(point);
+		const segs = this.getSegmentsWithPoint(point);
 		for (const seg of segs) {
 			this.removeSegment(seg);
 		}
@@ -66,7 +66,7 @@ class Graph {
 		this.segments.splice(this.segments.indexOf(seg), 1);
 	}
 
-	getSegmentWithPoint(point) {
+	getSegmentsWithPoint(point) {
 		const segs = [];
 		for (const seg of this.segments) {
 			if (seg.includes(point)) {
@@ -80,6 +80,7 @@ class Graph {
 		this.points.length = 0;
 		this.segments.length = 0;
 	}
+
 	draw(ctx) {
 		for (const seg of this.segments) {
 			seg.draw(ctx);
