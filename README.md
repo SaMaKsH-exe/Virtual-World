@@ -4,6 +4,15 @@
 
 Basic setup and run instructions for the virtual world demo.
 
+
+# Try it out here 
+
+virtual-world-five.vercel.app 
+
+--------
+IF you wanna make changes and clone, follow the guide below
+
+
 ## Prerequisites
 
 - Git installed
