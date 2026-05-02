@@ -16,6 +16,35 @@ An interactive 2D world simulator with roads, vehicles, buildings, and traffic s
 
 A visual simulation built with vanilla JavaScript. Features interactive editors for creating roads, parking lots, traffic lights, and more.
 
+## Usage
+
+### Getting Started
+
+1. **Start with an empty canvas** - You begin with a blank viewport to design your world
+2. **Create roads** - Left click to place nodes. Each click creates a node point on the canvas
+3. **Connect nodes** - Click two nodes and they'll automatically connect with a road path
+4. **Edit roads** - Right click on nodes or segments to access editors. Drag nodes to reposition them and adjust your road layout in real-time
+5. **Auto-generated elements** - Buildings and trees automatically generate around your roads as you design
+6. **Add markings** - Use the toolbar buttons to add road markings:
+   - Crossing lanes at intersections
+   - Parking spots and parking lots
+   - Traffic lights for intersection control
+   - Start points (where vehicles spawn)
+   - Stop signs
+   - Yield signs
+   - Target destinations (where vehicles navigate to)
+7. **Configure elements** - Click on markings and road segments to open editor panels where you can adjust properties, lane counts, and other settings
+
+### Controls
+
+- **Left click**: Place nodes to draw roads
+- **Right click**: Open editor panels for nodes and road segments to modify properties
+- **Drag nodes**: Click and drag any node to reposition it and adjust road layout
+- **Mouse drag (pan)**: Drag the canvas to move around the viewport
+- **Scroll**: Zoom in and out for better visibility
+- **Toolbar buttons**: Switch between road drawing mode and different marking tools
+- **Editor panels**: Fine-tune properties like road width, lane count, traffic light timing, etc.
+
 ## Quick Start
 
 ### Prerequisites
