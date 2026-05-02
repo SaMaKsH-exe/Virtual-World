@@ -1,13 +1,13 @@
 /** @format */
 
 class Viewport {
-	constructor(canvas) {
+	constructor(canvas, zoom = 1, offset = null) {
 		this.canvas = canvas;
 		this.ctx = canvas.getContext("2d");
 
-		this.zoom = 1;
+		this.zoom = zoom;
 		this.center = new Point(canvas.width / 2, canvas.height / 2);
-		this.offset = scale(this.center, -1);
+		this.offset = offset ? offset : scale(this.center, -1);
 		this.drag = {
 			start: new Point(0, 0),
 			end: new Point(0, 0),
@@ -31,7 +31,7 @@ class Viewport {
 	getMouse(evt, subtractDragOffset = false) {
 		const p = new Point(
 			(evt.offsetX - this.center.x) * this.zoom - this.offset.x,
-			(evt.offsetY - this.center.y) * this.zoom - this.offset.y
+			(evt.offsetY - this.center.y) * this.zoom - this.offset.y,
 		);
 		return subtractDragOffset ? subtract(p, this.drag.offset) : p;
 	}
