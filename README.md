@@ -21,9 +21,9 @@ A visual simulation built with vanilla JavaScript. Features interactive editors 
 ### Getting Started
 
 1. **Start with an empty canvas** - You begin with a blank viewport to design your world
-2. **Create roads** - Left click to place nodes. Each click creates a node point on the canvas
-3. **Connect nodes** - Click two nodes and they'll automatically connect with a road path
-4. **Edit roads** - Right click on nodes or segments to access editors. Drag nodes to reposition them and adjust your road layout in real-time
+2. **Create roads** - Left click to place nodes in graph mode
+3. **Connect nodes** - Select a node, then click another node (or a new point) to create a road segment
+4. **Edit roads** - Left click and drag a selected node to reshape roads
 5. **Auto-generated elements** - Buildings and trees automatically generate around your roads as you design
 6. **Add markings** - Use the toolbar buttons to add road markings:
    - Crossing lanes at intersections
@@ -34,16 +34,17 @@ A visual simulation built with vanilla JavaScript. Features interactive editors 
    - Yield signs
    - Target destinations (where vehicles navigate to)
 
-
 ### Controls
 
-- **Left click**: Place nodes to draw roads
-- **Right click**: Open editor panels for nodes and road segments to modify properties
-- **Drag nodes**: Click and drag any node to reposition it and adjust road layout
-- **Mouse drag (pan)**: Drag the canvas to move around the viewport
-- **Scroll**: Zoom in and out for better visibility
-- **Toolbar buttons**: Switch between road drawing mode and different marking tools
-- **Editor panels**: Fine-tune properties like road width, lane count, traffic light timing, etc.
+- **Left click (graph mode)**: Add/select nodes; clicking from a selected node creates a segment
+- **Left click + drag (graph mode)**: Move a selected node
+- **Right click (graph mode)**: Clear selected node, or remove a hovered node
+- **Left click (marking modes)**: Place the current marking on valid road/lane guides
+- **Right click (marking modes)**: Remove a marking under the cursor
+- **Middle mouse button + drag**: Pan the viewport
+- **Mouse wheel**: Zoom in/out (clamped between 1x and 5x)
+- **Mode buttons**: Switch between graph, stop, yield, crossing, parking, light, start, and target tools
+- **Top action buttons**: Clear world, save as `.world`, and load from `.world`
 
 ## Quick Start
 
