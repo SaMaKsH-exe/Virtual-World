@@ -33,7 +33,7 @@ A visual simulation built with vanilla JavaScript. Features interactive editors 
    - Stop signs
    - Yield signs
    - Target destinations (where vehicles navigate to)
-7. **Configure elements** - Click on markings and road segments to open editor panels where you can adjust properties, lane counts, and other settings
+
 
 ### Controls
 
