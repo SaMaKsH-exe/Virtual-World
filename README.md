@@ -2,35 +2,57 @@
 
 # Virtual World
 
-Basic setup and run instructions for the virtual world demo.
+An interactive 2D world simulator with roads, vehicles, buildings, and traffic systems.
 
+![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-# Try it out here 
+## Demo
 
-virtual-world-five.vercel.app 
+[virtual-world-five.vercel.app](https://virtual-world-five.vercel.app)
 
---------
-IF you wanna make changes and clone, follow the guide below
+---
 
+## About
 
-## Prerequisites
+A visual simulation built with vanilla JavaScript. Features interactive editors for creating roads, parking lots, traffic lights, and more.
+
+## Quick Start
+
+### Prerequisites
 
 - Git installed
-- A modern browser
-- Live Server (VS Code extension) or `npx live-server` available globally
+- A modern browser (Chrome, Firefox, Safari, Edge)
+- Live Server (VS Code extension) or `npx live-server` available
 
-## Clone
+### Installation
 
-```
+```bash
 git clone https://github.com/SaMaKsH-exe/Virtual-World.git
 cd Virtual-World
 ```
 
-## Run with Live Server
+### Running Locally
 
-- Using VS Code: open the folder, install/enable the Live Server extension, right-click `src/index.html` → Open with Live Server.
-- Using CLI: from the project root run `npx live-server src` (serves `src/index.html`).
+**Option 1: VS Code Live Server**
 
-## Notes
+1. Open the project folder in VS Code
+2. Install or enable the Live Server extension
+3. Right-click `src/index.html` → Open with Live Server
 
-- Built following this playlist: https://www.youtube.com/playlist?list=PLB0Tybl0UNfZtY5IQl1aNwcoOPJNtnPEO
+**Option 2: Command Line**
+
+```bash
+npx live-server src
+```
+
+This serves `src/index.html` in your browser automatically.
+
+## Learning Resources
+
+Built following this video series:
+
+**[YouTube Playlist](https://www.youtube.com/playlist?list=PLB0Tybl0UNfZtY5IQl1aNwcoOPJNtnPEO)**
+
+---
+
+Made with vanilla JavaScript
