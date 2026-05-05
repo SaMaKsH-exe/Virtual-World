@@ -16,10 +16,11 @@ class Road {
 		const topLeft = { x: this.xLeft, y: this.top };
 		const bottomLeft = { x: this.xLeft, y: this.bottom };
 		const bottomRight = { x: this.xRight, y: this.bottom };
-		this.border = [
+		this.borders = [
 			[topLeft, bottomLeft],
 			[topRight, bottomRight],
 		];
+		this.border = this.borders;
 	}
 
 	getLaneCenter(laneIndex) {
@@ -47,7 +48,7 @@ class Road {
 			ctx.stroke();
 		}
 		ctx.setLineDash([]);
-		this.border.forEach((border) => {
+		this.borders.forEach((border) => {
 			ctx.beginPath();
 			ctx.moveTo(border[0].x, border[0].y);
 			ctx.lineTo(border[1].x, border[1].y);
