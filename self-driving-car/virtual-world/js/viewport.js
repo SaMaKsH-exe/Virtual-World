@@ -25,7 +25,7 @@ class Viewport {
 		this.ctx.translate(this.center.x, this.center.y);
 		this.ctx.scale(1 / this.zoom, 1 / this.zoom);
 		const offset = this.getOffset();
-		ctx.translate(offset.x, offset.y);
+		this.ctx.translate(offset.x, offset.y);
 	}
 
 	getMouse(evt, subtractDragOffset = false) {
